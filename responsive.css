@@ -206,11 +206,6 @@ html, body {
     }
 
     /* hero text smaller */
-    .button1 a {
-
-        width: 1rem;
-    }
-
     .hero-content h1 {
 
         font-size: 1.5rem;
@@ -237,7 +232,7 @@ html, body {
     }
 
     .hero-button-email input {
-        width:75%;
+        width: 75%;
     }
 
 
