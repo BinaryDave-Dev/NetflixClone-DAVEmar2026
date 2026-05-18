@@ -1,4 +1,4 @@
-/* reset everything */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@
     
 }
 
-/* whole page */
+
 body {
     display: flex;
     flex-direction: column;
@@ -120,7 +120,7 @@ header {
     z-index: 1;
     color: white;
     text-align: center;
-    width: 100%;
+    width: 60%;
     max-width: 950px;
     margin: 0 auto;
     flex: 1;
@@ -257,7 +257,7 @@ header {
 }
 
 h5 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     line-height: 24px;
     
