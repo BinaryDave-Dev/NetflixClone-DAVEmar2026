@@ -1,3 +1,4 @@
+/* reset everything */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@
     
 }
 
+/* whole page */
 body {
     display: flex;
     flex-direction: column;
@@ -20,7 +22,7 @@ body {
 }
 
 
-
+/* HERO SECTION */
 
 
 .hero-container {
@@ -37,6 +39,7 @@ body {
     flex-direction: column;
 }
 
+/* glow border around hero */
 .hero-container::before {
     content: '';
     position: absolute;
@@ -58,6 +61,7 @@ body {
         0 0 70px 18px rgba(24, 9, 229, 0.25);
 }
 
+/* dark overlay on top of hero image */
 .overlay {
     height: 100%;
     width: 100%;
@@ -69,6 +73,7 @@ body {
     z-index: 0;
 }
 
+/* top header with logo and sign in */
 header {
     width: 100%;
     height: 88px;
@@ -80,6 +85,7 @@ header {
     padding: 0 48px;
 }
 
+/* netflix logo */
 .header-logo {
     width: 148px;
     height: 40px;
@@ -92,6 +98,7 @@ header {
     fill: #e50914;
 }
 
+/* sign in button */
 .button1 a {
     background-color: #e50914;
     color: #fff;
@@ -110,6 +117,7 @@ button.button1 {
 }
 
 
+/* hero text in the middle */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -154,6 +162,7 @@ button.button1 {
 
 
 
+/* FEATURES SECTION - tv with video */
 .features-container {
     display: flex;
     position: relative;
@@ -165,17 +174,20 @@ button.button1 {
 }
 
 
-.hero-button-email {
+/* email form (used for hero and bottom signup) */
+.hero-button-email,
+.signup-form {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    
 }
 
-.button2 {
+/* get started button */
+.button2,
+.signup-form button {
     width: 200px;
     height: 50px;
     border-radius: 5px;
@@ -189,26 +201,31 @@ button.button1 {
     gap: 12px;
     font-size: 24px;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.hero-button-email input {
+/* email input box */
+.hero-button-email input,
+.signup-form input {
     width: 360px;
     height: 50px;
     border-radius: 5px;
-    border: none;
     padding: 15px;
     margin: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #eee;
     font-size: 16px;
-    
-    
+}
+
+.signup-form input {
+    width: 540px;
 }
 
 
 
 
 
+/* tv image with the video playing inside */
 .tv-container {
     position: relative;
     display: flex;
@@ -230,6 +247,7 @@ button.button1 {
     position: absolute;
 }
 
+/* CAROUSEL SECTION - trending now */
 .trending-now-container {
     display: flex;
     justify-content: flex-start;
@@ -240,14 +258,15 @@ button.button1 {
     margin: 0 auto;
 }
 
-.trending-now-container h1 {
+h5 {
     font-size: 24px;
     font-weight: 600;
     line-height: 24px;
     
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
+/* carousel box that holds the posters */
 .carousel-container {
 
     display: flex;
@@ -283,6 +302,7 @@ button.button1 {
     background-color: #000;
 }
 
+/* each poster card */
 .carousel-item {
     border-radius: 10px;
     height: 100%;
@@ -303,6 +323,7 @@ button.button1 {
     
 }
 
+/* big number behind each poster */
 .card-number {
     line-height: 1;
     display: inline-block;
@@ -319,8 +340,9 @@ button.button1 {
     translate: -40% 50%;
 }
 
+/* arrow button area */
 .carousel-controls {
-    
+
     height: 100%;
     z-index: 2;
     font-size: 40px;
@@ -354,27 +376,225 @@ button.button1 {
     color: #fff;
 }
 
-/* FOOTER STYLES */
+
+
+/* CARDS SECTION - more reasons to join */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    background-color: #000;
+    position: relative;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.card-items-title {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1280px;
+    color: #fff;
+    padding: 20px 0 10px 0;
+    margin: 0 auto;
+    
+}
+
+.card-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+/* each card box */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: radial-gradient(ellipse at top left, #192247 0%, #0c0c1c 50%, #200b0b 100%);
+    border-radius: 20px;
+}
+
+.card svg {
+    margin-top: auto;
+    align-self: flex-end;
+    
+    
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px 0;
+    
+    padding: 10px 0;
+}
+
+.card h6 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 10px 0;
+    
+}
+
+
+/* FAQ SECTION */
+.faq {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1280px;
+    color: white;
+    margin: 0 auto;
+}
+
+.faq h5 {
+    margin-bottom: 20px;
+}
+
+/* each question dropdown */
+details {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    width: 1280px;
+    height: 100%;
+    gap: 20px;
+    color: #fff;
+
+    background-color: #2d2d2d;
+    cursor: pointer;
+
+    padding: 0;
+    margin-bottom: 10px;
+
+
+}
+
+
+/* the question text and plus icon row */
+summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+
+    list-style: none;
+
+    padding: 30px 20px 10px 20px;
+}
+
+
+
+/* the answer text */
+details p {
+    color: #dbdada;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 30px 50px 30px 20px;
+    
+}
+
+/* the plus icon next to each question */
+summary i.material-icons {
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+    
+    
+}
+
+
+
+
+
+
+
+/* bottom signup section */
+.signup-container {
+
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    margin: 0 auto;
+    
+    
+}
+
+.signup-container h5 {
+    font-size: 16px;
+    font-weight: 600;
+    
+    
+}
+
+.signup-form input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    height: 100%;
+    gap: 10px;
+    color: #fff;
+}
+
+/* FOOTER */
 .footer {
+    margin-top: 20px;
     background: black;
+    
 }
 
 .footer-items {
     margin: 0 47.5px;
-    padding: 70px 45px;
+    padding: 10px 80px;
 }
 
+/* questions line at the top of the footer */
 .footer-top {
     margin-bottom: 30px;
     color: rgba(255,255,255,0.7);
+    padding-bottom: 30px;
 }
 
+/* footer link list */
 .footer ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     list-style: none;
-    padding: 0;
+    padding: 0 0 30px 0;
 }
 
 .footer ul li, .questions-title {
@@ -385,7 +605,7 @@ button.button1 {
 }
 
 .footer ul li:hover, .questions-title:hover {
-    text-decoration: underline;
+    
     cursor: pointer;
 }
 
@@ -396,50 +616,73 @@ button.button1 {
 
 
 
-.footer ul li:hover, .questions-title:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
+
 
 .footer-bottom-items {
     display: flex;
-    padding: 0px 45px;
+    padding: 0px 80px;
+    margin: 0 auto;
     flex-direction: column;
+    width: 100%;
+    
     
 }
 
 
 
-.language { 
+/* language dropdown */
+.language {
+    position: relative;
     height: 32px;
     width: 128px;
     color: rgba(243, 243, 243, 1);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid rgb(94, 94, 94, 1);
-    padding: 0px 10px;
+    border: 3px solid rgb(94, 94, 94, 1);
+    margin: 0px 45px;
     border-radius: 5px;
     background-color: rgb(15, 15, 15, 1);
-    
 }
 
 .language select {
-    margin-left: 5px;
+    position: absolute;
+    inset: 0;
+    
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
     border: none;
     background-color: black;
     color: rgba(243, 243, 243, 1);
     font-size: 15px;
     font-weight: 600;
+}
 
+.language i.material-icons {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+    padding-left: 0;
 }
 
 i.material-icons {
     color: lightgrey;
     font-size: 17px;
+    padding-left: 10px;
 }
 
-p {
-    color: grey;
-    padding: 40px 0px;
+footer p {
+    
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px 0;
+    padding: 30px 45px 0px 45px;
+    color: rgba(255,255,255,0.7);
+    
 }
+

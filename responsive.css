@@ -1,11 +1,47 @@
+/* stop sideways scroll on small screens */
+html, body {
+    overflow-x: hidden;
+}
+
+
+/* TABLET STYLES */
 @media (max-width: 768px) and (min-width: 480px) {
 
 
+    /* shrink header stuff */
     .header-logo {
         width: 120px;
-        
+
     }
 
+    header {
+        padding: 0 24px;
+    }
+
+    .hero-container {
+        min-height: 600px;
+    }
+
+    /* keep tv image from going off screen */
+    .features-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .tv-container {
+        width: 100%;
+    }
+
+    .tv-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tv-container video {
+        max-width: 100%;
+    }
+
+    /* hero text smaller */
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -18,6 +54,7 @@
         font-size: 1rem;
     }
 
+    /* stack email form */
     .hero-button-email {
         flex-direction: column;
     }
@@ -31,19 +68,144 @@
     }
 
 
+    /* carousel full width */
+    .trending-now-container {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 220px;
+    }
+
+    .carousel-item {
+        width: calc(100% / 3);
+        padding: 0 10px 10px 10px;
+    }
+
+    .card-number {
+        font-size: 4rem;
+    }
+
+    /* stack the cards */
+    .card-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .card-items-title {
+        width: 100%;
+    }
+
+    .card-items {
+        flex-direction: column;
+    }
+
+    .card h6 {
+        font-size: 1.125rem;
+    }
+
+    .card p {
+        font-size: 0.875rem;
+    }
+
+
+    /* faq full width */
+    .faq {
+        width: 100%;
+        padding: 20px;
+    }
+
+    details {
+        width: 100%;
+    }
+
+    summary {
+        font-size: 1.125rem;
+    }
+
+    details p {
+        font-size: 1rem;
+    }
+
+    /* bottom signup stacked */
+    .signup-container h5 {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .signup-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .signup-form input {
+        width: 100%;
+    }
+
+    .signup-form button {
+        width: 100%;
+    }
+
+
+    /* footer shrink */
+    .footer-items {
+        margin: 0 20px;
+        padding: 10px 20px;
+    }
+
+    .footer ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-bottom-items {
+        padding: 0 20px;
+    }
 
 
 }
 
 
+/* MOBILE STYLES */
 @media (max-width: 480px) {
 
-    
+
+    /* even smaller header */
     .header-logo {
         width: 90px;
-        
+
     }
 
+    header {
+        padding: 0 16px;
+    }
+
+    .hero-container {
+        min-height: 500px;
+    }
+
+    /* keep tv image from going off screen */
+    .features-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .tv-container {
+        width: 100%;
+    }
+
+    .tv-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tv-container video {
+        max-width: 100%;
+    }
+
+    /* hero text smaller */
     .button1 a {
 
         width: 1rem;
@@ -66,6 +228,7 @@
 
     }
 
+    /* stack email form */
     .hero-button-email {
 
         flex-direction: column;
@@ -77,13 +240,138 @@
         width:75%;
     }
 
-   
-    
+
+
 
     .button2 {
 
         width: 75%;
 
+    }
+
+
+    /* carousel full width with smaller cards */
+    .trending-now-container {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    h5 {
+        font-size: 1.125rem;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 180px;
+    }
+
+    .carousel-item {
+        width: calc(100% / 2);
+        padding: 0 8px 8px 8px;
+    }
+
+    .card-number {
+        font-size: 3rem;
+    }
+
+    /* stack the cards */
+    .card-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .card-items-title {
+        width: 100%;
+    }
+
+    .card-items {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h6 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.875rem;
+    }
+
+    .card svg {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /* faq full width with smaller text */
+    .faq {
+        width: 100%;
+        padding: 15px;
+    }
+
+    details {
+        width: 100%;
+    }
+
+    summary {
+        font-size: 1rem;
+        padding: 20px 15px 10px 15px;
+    }
+
+    details p {
+        font-size: 0.875rem;
+        padding: 20px 15px;
+    }
+
+    summary i.material-icons {
+        font-size: 24px;
+    }
+
+    /* bottom signup stacked */
+    .signup-container h5 {
+        font-size: 0.875rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .signup-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .signup-form input {
+        width: 75%;
+    }
+
+    .signup-form button {
+        width: 75%;
+    }
+
+
+    /* footer shrink to 2 columns */
+    .footer-items {
+        margin: 0 15px;
+        padding: 10px 15px;
+    }
+
+    .footer ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom-items {
+        padding: 0 15px;
+    }
+
+    .language {
+        margin: 0 15px;
+    }
+
+    footer p {
+        padding: 20px 15px 0 15px;
+        font-size: 0.875rem;
     }
 
 }
